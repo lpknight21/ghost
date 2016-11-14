@@ -1,10 +1,10 @@
 #Description:
-#	Calls the destiny api for stats. 
+#	Calls the destiny api for stats. Console is optional.
 #
 #Commands:
-#	hubot 
+#	hubot destiny <gamertag|my|me> <action> <console>
 
-http = require 'http'
+app = require 'http'
 
 module.exports = (robot) ->
 	robot.hear /destiny (.*) (.*) (.*)/i, (res) ->
@@ -18,6 +18,5 @@ module.exports = (robot) ->
 
 		response = http.get {uri:'https://2g.be/twitch/destinyv2.php?action='+action+'&gamertag='+gamer+'&user='+username+'&console='+console+'&defaultconsole=xbox'} (err, r, body) ->
 			response = body
-			console.log = "Response from destiny api."
 		
 		res.send response
