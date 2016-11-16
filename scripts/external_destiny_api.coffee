@@ -20,7 +20,7 @@ module.exports = (robot) ->
 		msg.http(url)
 			.get() (err, res, body) ->
 				try
-					response = '```' + body + '```'
+					#response = '```' + body + '```'
 					msg.send response
 				catch error
 					msg.send "Trouble fetching destiny info."
