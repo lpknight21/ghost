@@ -8,12 +8,7 @@ https = require 'https'
 
 module.exports = (robot) ->
 	robot.respond /(.*)/i, (msg) ->
-		gamer = msg.match[1]
-		action = msg.match[2]
-		username = msg.message.user.name
-
-		if gamer == 'my' || gamer == 'me'
-			gamer = ''
+		cardName = msg.match[1]
 
 		url = "https://vast-fortress-18504.herokuapp.com/card/name/#{{cardName}}/info"
 
