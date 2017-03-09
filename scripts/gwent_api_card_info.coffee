@@ -2,7 +2,7 @@
 #	Calls the gwent api for card stats.
 #
 #Commands:
-#	!info <cardName>
+#	hubot card info for <cardName>
 
 https = require 'https'
 
