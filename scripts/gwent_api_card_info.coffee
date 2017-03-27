@@ -2,12 +2,12 @@
 #	Calls the gwent api for card stats.
 #
 #Commands:
-#	hubot !card <cardName>
+#	hubot card info for <cardName>
 
 https = require 'https'
 
 module.exports = (robot) ->
-	robot.respond /!card (.*)/i, (msg) ->
+	robot.respond /card info for (.*)/i, (msg) ->
 		cardName = msg.match[1]
 
 		url = "https://gwent-api.herokuapp.com/card/name/#{cardName}/info"
