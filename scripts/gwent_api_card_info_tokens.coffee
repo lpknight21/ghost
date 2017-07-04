@@ -10,7 +10,7 @@ module.exports = (robot) ->
 	robot.respond /card info with tokens for (.*)/i, (msg) ->
 		cardName = msg.match[1]
 
-		url = "https://gwent-api.herokuapp.com/card/name/#{cardName}/info?withTokens=true"
+		url = "https://cardlife-api.herokuapp.com/card/name/#{cardName}/info?withTokens=true"
 
 		msg.http(url)
 			.get() (err, res, body) ->
