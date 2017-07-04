@@ -7,7 +7,7 @@
 https = require 'https'
 
 module.exports = (robot) ->
-	robot.respond /card info for (.*)/i, (msg) ->
+	robot.respond /keyword (.*)/i, (msg) ->
 		keywordName = msg.match[1]
 
 		url = "https://cardlife-api.herokuapp.com/keyword/name/#{keywordName}/text"
