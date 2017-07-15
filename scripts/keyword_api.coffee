@@ -10,7 +10,7 @@ module.exports = (robot) ->
 	robot.respond /keyword (.*)/i, (msg) ->
 		keywordName = msg.match[1]
 
-		url = "https://cardlife-api.herokuapp.com/keyword/name/#{keywordName}/text"
+		url = "https://cardlife-api.herokuapp.com/keyword/name/#{keywordName}/info"
 
 		msg.http(url)
 			.get() (err, res, body) ->
